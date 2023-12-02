@@ -71,6 +71,11 @@ Antes de começar, certifique-se de ter o Python e o Django instalados no seu si
 - Visualize palavras e frases aprendidas.
 - Acompanhe o seu progresso na conjugação de verbos.
 
+# obs
+- O projeto ainda em desenvolvimento
 
 ## Contribuição
 Sinta-se à vontade para contribuir para o desenvolvimento deste projeto. Se encontrar problemas ou tiver sugestões, abra uma issue. Pull requests são bem-vindos!
+
+#obs
+- O projeto ainda em desenvolvimento
