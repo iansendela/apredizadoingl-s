@@ -1,0 +1,13 @@
+<h1>Adicionar Frase</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Adicionar</button>
+</form>
+
+<h2>Frases Adicionadas:</h2>
+<ul>
+  {% for frase in frases %}
+    <li>{{ frase.frase}} - {{ frase.traducao_frase }}</li>
+  {% endfor %}
+</ul>

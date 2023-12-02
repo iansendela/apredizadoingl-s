@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplicativo de Aprendizado de Inglês</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-size: 24px; 
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: #2c3e50;
+        }
+
+        .jumbotron {
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        .jumbotron h2 {
+            font-size: 36px;
+        }
+
+        .jumbotron p {
+            font-size: 20px;
+        }
+
+        .card {
+            position: relative; 
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 250px; /* Defina a altura fixa desejada aqui */
+        overflow: hidden; /* Para evitar que o conteúdo ultrapasse a altura do card*/ 
+    }
+
+        .card h3 {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+
+        .btn-vermais {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 14px;
+        position: absolute;
+        bottom: 20px; /* Distância do botão em relação ao final do card */
+        right: 20px; /* Distância do botão em relação à direita do card */
+    }
+
+        .btn-vermais:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-verconteudo {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 18px;
+        }
+
+        .btn-verconteudo:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-top:hover {
+            background-color: #2980b9;
+        }
+
+        /* Restante do seu CSS... */
+    </style>
+</head>
+<body class="container py-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Aprendizado de Inglês</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conteudo">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'todas_minhas_palavras' %}">Palavras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'todas_frases' %}">Frases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

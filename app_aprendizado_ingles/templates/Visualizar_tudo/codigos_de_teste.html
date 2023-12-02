@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Frases do Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container { 
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            color: #34495e;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .btn-vermais {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .btn-vermais:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Suas Frases</h1>
+        
+        <div class="row">
+            {% for frase in frases %}
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3>Frases com palavra {{ frase.palavras }}</h3>
+                    <p>{{ frase.frase }} - {{frase.traducao_frase}}</p>
+                    <a href="{% url 'frases_com_palavra' palavra_id=frase.palavras_id %}" class="btn btn-vermais">Ver Todas frases com a palavra {{frase.palavras}}</a>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

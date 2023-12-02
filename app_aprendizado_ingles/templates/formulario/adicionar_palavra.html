@@ -1,0 +1,13 @@
+<h1>Adicionar Palavra</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Adicionar</button>
+</form>
+
+<h2>Palavras Adicionadas:</h2>
+<ul>
+  {% for palavra in palavras %}
+    <li>{{ palavra.palavra }} - {{ palavra.traducao }} </a></li>
+  {% endfor %}
+</ul>

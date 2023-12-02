@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palavras Aprendidas</title>
+</head>
+<body>
+    <h1>Palavras Aprendidas</h1>
+    <ul>
+        {% for palavra in palavras_aprendidas %}
+            <li>{{ palavra.palavra }} - Tradução: {{ palavra.traducao }}</li>
+            {% endfor %}
+    </ul>
+</body>
+</html>
+ 
