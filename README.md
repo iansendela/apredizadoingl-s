@@ -14,7 +14,7 @@ Antes de começar, certifique-se de ter o Python e o Django instalados no seu si
 ## Configuração do Projeto
 
 1. Clone este repositório para o seu ambiente local.
-- git clone https://github.com/seu-usuario/nome-do-repositorio.git
+- git clone `https://github.com/iansendela/apredizadoingl-s.git`
 
 
 2. Navegue até o diretório do projeto.
